@@ -3,7 +3,7 @@
 
 
 
-int game_end(int game_type, int fishes_on_board,int turn_number, int possible_move_one, int possible_move_two, int numb_of_penguins_team, int teams)  //function returns 1 = end of the game, 0=can continue
+int game_end(int game_type, int fishes_on_board,int turn_number, int possible_move, int numb_of_penguins_team, int teams)  //function returns 1 = end of the game, 0=can continue
 {
 
     if(turn_number > (numb_of_penguins_team)*teams)
@@ -12,19 +12,19 @@ int game_end(int game_type, int fishes_on_board,int turn_number, int possible_mo
 
     if(game_type == 1)  // 20 turns mode
     {
-        if(fishes_on_board>0 && turn_number<=20 && possible_move_one!=0 && possible_move_two !=0)
+        if(fishes_on_board>0 && turn_number<=20 && possible_move!=0)
 
             return 0;
     }
     else if(game_type == 2)  //40 turns mode
     {
-        if(fishes_on_board>0 && turn_number<=40 && possible_move_one!=0 && possible_move_two !=0)
+        if(fishes_on_board>0 && turn_number<=40 && possible_move!=0)
 
             return 0;
     }
     else if(game_type == 3)   // if fishes mode
     {
-        if(fishes_on_board>0 && turn_number>=0 && possible_move_one!=0 && possible_move_two !=0)
+        if(fishes_on_board>0 && turn_number>=0 && possible_move!=0)
             return 0;
     }
 
